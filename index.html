@@ -6,45 +6,126 @@
     <style>
       html,
       body {
-        height: 100%;
+        height: auto !important;
         margin: 0;
         font-size: large;
         font-family: Arial, sans-serif;
         text-align: center;
         background: lightpink no-repeat center center fixed !important;
-        background-size: cover;
+        background-size: cover !important;
       }
       h1 {
         padding: 40px 40px;
       }
       audio {
         display: block;
-        width: 75%;
-        margin: 20px auto;
+        width: 35%;
+        margin: 50px auto;
+        transform: scale(2.5);
+      }
+      #custom-controls button {
+        font-size: 90px;
+        border: none;
+        background-color: transparent;
+        padding: 0% 15%;
+        margin: 20px;
       }
     </style>
-    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <!-- Placeholder for the navbar -->
     <div id="navbar-placeholder"></div>
 
-    <script src="js/load-navbar.js"></script>
+    <br />
 
-    <img src="images/mermaid.jpg" alt="Mermaid" width="50%" />
+    <img
+      src="images/mermaid.jpg"
+      alt="Mermaid"
+      width="50%"
+      style="cursor: pointer; margin: 10%"
+      onclick="refreshPage()"
+    />
 
     <h1>Sparkle Princess</h1>
 
-    <h3 class="mt-4">Hallucinate</h3>
-    <audio controls>
-      <source src="music/Hallucinate.mp3" type="audio/mp3" />
+    <hr />
+
+    <h3 class="mt-4">Ping Pong</h3>
+
+    <audio id="player" controls>
+      <source src="music/PingPong.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
+
+    <div id="custom-controls">
+      <button onclick="document.getElementById('player').play()">▶️</button>
+      <button onclick="document.getElementById('player').pause()">⏸️</button>
+    </div>
+
+    <hr />
+
+    <br />
+    <h1>A a</h1>
+    <br />
+    <h1>B b</h1>
+    <br />
+    <h1>C c</h1>
+    <br />
+    <h1>D d</h1>
+    <br />
+    <h1>E e</h1>
+    <br />
+    <h1>F f</h1>
+    <br />
+    <h1>G g</h1>
+    <br />
+    <h1>H h</h1>
+    <br />
+    <h1>I i</h1>
+    <br />
+    <h1>J j</h1>
+    <br />
+    <h1>K k</h1>
+    <br />
+    <h1>L l</h1>
+    <br />
+    <h1>M m</h1>
+    <br />
+    <h1>N n</h1>
+    <br />
+    <h1>O o</h1>
+    <br />
+    <h1>P p</h1>
+    <br />
+    <h1>Q q</h1>
+    <br />
+    <h1>R r</h1>
+    <br />
+    <h1>S s</h1>
+    <br />
+    <h1>T t</h1>
+    <br />
+    <h1>U u</h1>
+    <br />
+    <h1>V v</h1>
+    <br />
+    <h1>W w</h1>
+    <br />
+    <h1>X x</h1>
+    <br />
+    <h1>Y y</h1>
+    <br />
+    <h1>Z z</h1>
+    <br />
   </body>
+  <script src="js/load-navbar.js"></script>
+  <script>
+    function refreshPage() {
+      window.location.reload();
+    }
+  </script>
 </html>
