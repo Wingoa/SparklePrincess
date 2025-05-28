@@ -17,18 +17,23 @@
       h1 {
         padding: 40px 40px;
       }
+      h2 {
+        font-size: 75px !important;
+      }
       audio {
         display: block;
-        width: 35%;
+        width: 85%;
         margin: 50px auto;
-        transform: scale(2.5);
       }
       #custom-controls button {
-        font-size: 90px;
-        border: none;
-        background-color: transparent;
+        font-size: 25px;
         padding: 0% 15%;
         margin: 20px;
+      }
+      iframe {
+        width: 100%;
+        height: 90vh;
+        border: none;
       }
     </style>
     <link
@@ -38,7 +43,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <div id="navbar-placeholder"></div>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      style="min-height: 10vh !important; font-size: xx-large !important"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <br />
 
@@ -62,67 +94,84 @@
     </audio>
 
     <div id="custom-controls">
-      <button onclick="document.getElementById('player').play()">▶️</button>
-      <button onclick="document.getElementById('player').pause()">⏸️</button>
+      <button
+        onclick="document.getElementById('player').play()"
+        class="btn btn-primary"
+      >
+        Play
+      </button>
+      <button
+        onclick="document.getElementById('player').pause()"
+        class="btn btn-danger"
+      >
+        Pause
+      </button>
     </div>
 
     <hr />
 
     <br />
-    <h1>A a</h1>
+    <h2>A a</h2>
     <br />
-    <h1>B b</h1>
+    <h2>B b</h2>
     <br />
-    <h1>C c</h1>
+    <h2>C c</h2>
     <br />
-    <h1>D d</h1>
+    <h2>D d</h2>
     <br />
-    <h1>E e</h1>
+    <h2>E e</h2>
     <br />
-    <h1>F f</h1>
+    <h2>F f</h2>
     <br />
-    <h1>G g</h1>
+    <h2>G g</h2>
     <br />
-    <h1>H h</h1>
+    <h2>H h</h2>
     <br />
-    <h1>I i</h1>
+    <h2>I i</h2>
     <br />
-    <h1>J j</h1>
+    <h2>J j</h2>
     <br />
-    <h1>K k</h1>
+    <h2>K k</h2>
     <br />
-    <h1>L l</h1>
+    <h2>L l</h2>
     <br />
-    <h1>M m</h1>
+    <h2>M m</h2>
     <br />
-    <h1>N n</h1>
+    <h2>N n</h2>
     <br />
-    <h1>O o</h1>
+    <h2>O o</h2>
     <br />
-    <h1>P p</h1>
+    <h2>P p</h2>
     <br />
-    <h1>Q q</h1>
+    <h2>Q q</h2>
     <br />
-    <h1>R r</h1>
+    <h2>R r</h2>
     <br />
-    <h1>S s</h1>
+    <h2>S s</h2>
     <br />
-    <h1>T t</h1>
+    <h2>T t</h2>
     <br />
-    <h1>U u</h1>
+    <h2>U u</h2>
     <br />
-    <h1>V v</h1>
+    <h2>V v</h2>
     <br />
-    <h1>W w</h1>
+    <h2>W w</h2>
     <br />
-    <h1>X x</h1>
+    <h2>X x</h2>
     <br />
-    <h1>Y y</h1>
+    <h2>Y y</h2>
     <br />
-    <h1>Z z</h1>
+    <h2>Z z</h2>
     <br />
+
+    <hr />
+
+    <h1>Poop Clicker</h1>
+    <iframe
+      src="https://www.onlinegames.io/games/2024/construct/292/poop-clicker/index.html"
+      allowfullscreen
+    ></iframe>
   </body>
-  <script src="js/load-navbar.js"></script>
   <script>
     function refreshPage() {
       window.location.reload();
