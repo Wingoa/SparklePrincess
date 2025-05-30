@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Sparkle Princess</title>
     <style>
       html,
@@ -35,11 +37,6 @@
         margin: 20px;
         width: 80%;
       }
-      iframe {
-        width: 100%;
-        height: 90vh;
-        border: none;
-      }
     </style>
   </head>
   <body>
@@ -57,7 +54,7 @@
     <hr />
     <br />
 
-    <image
+    <img
       id="songImage"
       src="artwork/PingPong.jpg"
       alt="Song Artwork"
@@ -188,54 +185,53 @@
     <hr />
   </body>
   <script>
-    function refreshPage() {
-      window.location.reload();
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      function refreshPage() {
+        window.location.reload();
+      }
 
-    const playlist = [
-      "music/PingPong.mp3",
-      "music/Hallucinate.mp3",
-      "music/APT.mp3",
-    ];
+      const playlist = [
+        "music/PingPong.mp3",
+        "music/Hallucinate.mp3",
+        "music/APT.mp3",
+      ];
 
-    const titles = ["Ping Pong", "Hallucinate", "APT"];
+      const titles = ["Ping Pong", "Hallucinate", "APT"];
+      const images = [
+        "artwork/PingPong.jpg",
+        "artwork/Hallucinate.jpg",
+        "artwork/APT.jpg",
+      ];
 
-    const images = [
-      "artwork/PingPong.jpg",
-      "artwork/Hallucinate.jpg",
-      "artwork/APT.jpg",
-    ];
+      let currentTrack = 0;
 
-    let currentTrack = 0;
+      const player = document.getElementById("player");
+      const source = document.getElementById("audioSource");
+      const songTitle = document.getElementById("songTitle");
+      const songImage = document.getElementById("songImage");
 
-    const player = document.getElementById("player");
-    const source = document.getElementById("audioSource");
-    const songTitle = document.getElementById("songTitle");
-    const songImage = document.getElementById("songImage");
+      function loadAndPlayTrack(index) {
+        songTitle.innerText = titles[index];
+        songImage.src = images[index];
+        source.src = playlist[index];
+        player.load();
+        player.play();
+      }
 
-    // Load and play current track
-    function loadAndPlayTrack(index) {
-      console.log(`Loading track: ${titles[index]}`);
-      songTitle.innerText = titles[index];
-      songImage.src = images[index];
-      source.src = playlist[index];
-      player.load();
-      player.play();
-    }
+      function playNext() {
+        currentTrack = (currentTrack + 1) % playlist.length;
+        loadAndPlayTrack(currentTrack);
+      }
 
-    // Next track
-    function playNext() {
-      currentTrack = (currentTrack + 1) % playlist.length;
-      loadAndPlayTrack(currentTrack);
-    }
+      function playPrevious() {
+        currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+        loadAndPlayTrack(currentTrack);
+      }
 
-    // Previous track
-    function playPrevious() {
-      currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
-      loadAndPlayTrack(currentTrack);
-    }
+      player.addEventListener("ended", playNext);
 
-    // Auto play next when current ends
-    player.addEventListener("ended", playNext);
+      window.playNext = playNext;
+      window.playPrevious = playPrevious;
+    });
   </script>
 </html>
