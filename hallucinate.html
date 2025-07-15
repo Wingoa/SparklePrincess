@@ -42,50 +42,23 @@
   </head>
   <body>
     <hr />
-    <!-- <img
-      src="images/mermaid.jpg"
-      alt="Mermaid"
-      width="50%"
-      style="cursor: pointer"
-      onclick="refreshPage()"
-    />
 
-    <h1>Sparkle Princess</h1>
-
-    <hr /> -->
     <br />
-
-    <img
-      id="songImage"
-      src="artwork/Hallucinate.jpg"
-      alt="Song Artwork"
-      width="50%"
-    />
 
     <h3 id="songTitle">Hallucinate</h3>
 
-    <audio id="player" controls>
-      <source id="audioSource" src="music/Hallucinate.mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
-    </audio>
+    <video
+      style="width: 608px; height: 342px; left: 1px; top: 0px"
+      tabindex="-1"
+      aria-hidden="true"
+      class="video-stream html5-main-video"
+      webkit-playsinline=""
+      playsinline=""
+      controlslist="nodownload"
+      src="blob:https://www.youtube-nocookie.com/eae0b8bb-fcbf-4c6a-824c-710e89a3419f"
+    ></video>
 
     <div class="custom-controls">
-      <button onclick="document.getElementById('player').play()">
-        <img
-          src="images/play.png"
-          alt="Play"
-          width="20%"
-          style="cursor: pointer; margin: 10px 40px"
-        />
-      </button>
-      <button onclick="document.getElementById('player').pause()">
-        <img
-          src="images/pause.png"
-          alt="Pause"
-          width="15%"
-          style="cursor: pointer; margin: 10px 40px"
-        />
-      </button>
       <button>
         <a href="apt.html">
           <img
@@ -179,7 +152,7 @@
 
     <hr />
   </body>
-  <script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
       function refreshPage() {
         window.location.reload();
@@ -228,5 +201,5 @@
       window.playNext = playNext;
       window.playPrevious = playPrevious;
     });
-  </script>
+  </script> -->
 </html>
