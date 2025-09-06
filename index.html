@@ -1,232 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sparkle Princess</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<style>
+			html,
+			body {
+				margin: 0;
+				font-size: large;
+				font-family: Arial, sans-serif;
+				text-align: center;
+				background: lightpink no-repeat center center fixed;
+				background-size: cover;
+			}
+			hr {
+				height: 20px;
+				background-color: black;
+				border: none;
+			}
+			h1 {
+				padding: 20px;
+			}
+			h2 {
+				font-size: 75px;
+			}
+			audio {
+				display: block;
+				width: 85%;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- ######### Header ######### -->
+		<hr />
+		<a href="index.html">
+			<img src="images/mermaid.jpg" alt="Home Page" width="50%" style="cursor: pointer" />
+		</a>
 
-    <title>Sparkle Princess</title>
-    <style>
-      html,
-      body {
-        height: auto !important;
-        margin: 0;
-        font-size: large;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background: lightpink no-repeat center center fixed !important;
-        background-size: cover !important;
-      }
-      hr {
-        height: 20px;
-        background-color: black;
-      }
-      h1 {
-        padding: 20px 20px;
-      }
-      h2 {
-        font-size: 75px !important;
-      }
-      audio {
-        display: block;
-        width: 85%;
-        margin: 50px auto;
-      }
-      .custom-controls button {
-        font-size: 25px;
-        padding: 0% 5%;
-        margin: 5px;
-        width: 80%;
-        height: 5%;
-      }
-    </style>
-  </head>
-  <body>
-    <hr />
-    <!-- <img
-      src="images/mermaid.jpg"
-      alt="Mermaid"
-      width="50%"
-      style="cursor: pointer"
-      onclick="refreshPage()"
-    />
+		<h1>Sparkle Princess</h1>
+		<hr />
+		<br />
 
-    <h1>Sparkle Princess</h1>
+		<!-- PingPong -->
+		<a href="pages/pingpong.html">
+			<img id="songImage" src="artwork/PingPong.jpg" alt="Ping Pong Song Artwork" width="30%" />
+			<h3 id="songTitle">Ping Pong</h3>
+		</a>
+		<hr />
 
-    <hr /> -->
-    <br />
+		<!-- APT -->
+		<a href="pages/apt.html">
+			<img id="songImage" src="artwork/APT.jpg" alt="Song Artwork" width="25%" />
+			<h3 id="songTitle">APT</h3>
+		</a>
+		<hr />
 
-    <img
-      id="songImage"
-      src="artwork/PingPong.jpg"
-      alt="Song Artwork"
-      width="50%"
-    />
+		<!-- Hallucinate-->
+		<a href="pages/hallucinate.html">
+			<img id="songImage" src="artwork/Hallucinate.jpg" alt="Hallucinate Song Artwork" width="40%" />
+			<h3 id="songTitle">Hallucinate</h3>
+		</a>
+		<hr />
 
-    <h3 id="songTitle">Ping Pong</h3>
+		<!-- How It's Done -->
+		<a href="pages/howitsdone.html">
+			<img id="songImage" src="artwork/HowItsDone.jpg" alt="How It's Done Song Artwork" width="30%" />
+			<h3 id="songTitle">How It's Done</h3>
+		</a>
+		<hr />
 
-    <audio id="player" controls>
-      <source id="audioSource" src="music/PingPong.mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
-    </audio>
+		<!-- Your Idol -->
+		<a href="pages/youridol.html">
+			<img id="songImage" src="artwork/YourIdol.jpg" alt="Your Idol Song Artwork" width="30%" />
+			<h3 id="songTitle">Your Idol</h3>
+		</a>
+		<hr />
 
-    <div class="custom-controls">
-      <button onclick="document.getElementById('player').play()">
-        <img
-          src="images/play.png"
-          alt="Play"
-          width="20%"
-          style="cursor: pointer; margin: 10px 40px"
-        />
-      </button>
-      <button onclick="document.getElementById('player').pause()">
-        <img
-          src="images/pause.png"
-          alt="Pause"
-          width="15%"
-          style="cursor: pointer; margin: 10px 40px"
-        />
-      </button>
-      <button>
-        <a href="hallucinate.html">
-          <img
-            src="images/next.png"
-            alt="Next"
-            width="10%"
-            style="cursor: pointer; margin: 10px 40px"
-          />
-        </a>
-      </button>
-    </div>
+		<!-- Golden -->
+		<a href="pages/golden.html">
+			<img id="songImage" src="artwork/Golden.png" alt="Golden Song Artwork" width="30%" />
+			<h3 id="songTitle">Golden</h3>
+		</a>
+		<hr />
 
-    <hr />
+		<!-- Takedown -->
+		<a href="pages/takedown.html">
+			<img id="songImage" src="artwork/takedown.jpg" alt="Takedown Song Artwork" width="30%" />
+			<h3 id="songTitle">Takedown</h3>
+		</a>
 
-    <br />
-    <h2>A a</h2>
-    <br />
-    <h2>B b</h2>
-    <br />
-    <h2>C c</h2>
-    <br />
-    <h2>D d</h2>
-    <br />
-    <h2>E e</h2>
-    <br />
-    <h2>F f</h2>
-    <br />
-    <h2>G g</h2>
-    <br />
-    <h2>H h</h2>
-    <br />
-    <h2>I i</h2>
-    <br />
-    <h2>J j</h2>
-    <br />
-    <h2>K k</h2>
-    <br />
-    <h2>L l</h2>
-    <br />
-    <h2>M m</h2>
-    <br />
-    <h2>N n</h2>
-    <br />
-    <h2>O o</h2>
-    <br />
-    <h2>P p</h2>
-    <br />
-    <h2>Q q</h2>
-    <br />
-    <h2>R r</h2>
-    <br />
-    <h2>S s</h2>
-    <br />
-    <h2>T t</h2>
-    <br />
-    <h2>U u</h2>
-    <br />
-    <h2>V v</h2>
-    <br />
-    <h2>W w</h2>
-    <br />
-    <h2>X x</h2>
-    <br />
-    <h2>Y y</h2>
-    <br />
-    <h2>Z z</h2>
-    <br />
-
-    <hr />
-
-    <h2>1</h2>
-    <br />
-    <h2>2</h2>
-    <br />
-    <h2>3</h2>
-    <br />
-    <h2>4</h2>
-    <br />
-    <h2>5</h2>
-    <br />
-    <h2>6</h2>
-    <br />
-    <h2>7</h2>
-    <br />
-    <h2>8</h2>
-    <br />
-    <h2>9</h2>
-    <br />
-    <h2>10</h2>
-    <br />
-
-    <hr />
-  </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      function refreshPage() {
-        window.location.reload();
-      }
-
-      const playlist = [
-        "music/PingPong.mp3",
-        "music/Hallucinate.mp3",
-        "music/APT.mp3",
-      ];
-
-      const titles = ["Ping Pong", "Hallucinate", "APT"];
-      const images = [
-        "artwork/PingPong.jpg",
-        "artwork/Hallucinate.jpg",
-        "artwork/APT.jpg",
-      ];
-
-      let currentTrack = 0;
-
-      const player = document.getElementById("player");
-      const source = document.getElementById("audioSource");
-      const songTitle = document.getElementById("songTitle");
-      const songImage = document.getElementById("songImage");
-
-      function loadAndPlayTrack(index) {
-        songTitle.innerText = titles[index];
-        songImage.src = images[index];
-        source.src = playlist[index];
-        player.load();
-        player.play();
-      }
-
-      function playNext() {
-        currentTrack = (currentTrack + 1) % playlist.length;
-        loadAndPlayTrack(currentTrack);
-      }
-
-      function playPrevious() {
-        currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
-        loadAndPlayTrack(currentTrack);
-      }
-
-      player.addEventListener("ended", playNext);
-
-      window.playNext = playNext;
-      window.playPrevious = playPrevious;
-    });
-  </script>
+		<hr />
+	</body>
 </html>

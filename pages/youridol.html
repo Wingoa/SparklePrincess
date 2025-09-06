@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sparkle Princess</title>
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<style>
+			html,
+			body {
+				margin: 0;
+				font-size: large;
+				font-family: Arial, sans-serif;
+				text-align: center;
+				background: lightpink no-repeat center center fixed;
+				background-size: cover;
+			}
+			hr {
+				height: 20px;
+				background-color: black;
+				border: none;
+			}
+			h1 {
+				padding: 20px;
+			}
+			h2 {
+				font-size: 75px;
+			}
+			audio {
+				display: block;
+				width: 85%;
+				margin: 50px auto;
+			}
+			.custom-controls button {
+				font-size: 25px;
+				padding: 0% 5%;
+				margin: 5px;
+				width: 80%;
+				height: 5%;
+			}
+			.custom-controls img {
+				width: 20%;
+				cursor: pointer;
+				margin: 10px 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- ######### Header ######### -->
+		<hr />
+		<a href="../index.html">
+			<img src="../images/mermaid.jpg" alt="Home Page" width="50%" style="cursor: pointer" />
+		</a>
+		<h1>Sparkle Princess</h1>
+		<hr />
+		<br />
+
+		<img
+			id="songImage"
+			src="../artwork/youridol.jpg"
+			alt="Song Artwork"
+			style="max-width: 30%; width: 100%; height: auto"
+		/>
+
+		<h3 id="songTitle">Your Idol</h3>
+
+		<audio id="player" controls>
+			<source id="audioSource" src="../music/youridol.mp3" type="audio/mp3" />
+			Your browser does not support the audio element.
+		</audio>
+
+		<div class="custom-controls">
+			<button onclick="document.getElementById('player').play()">
+				<img src="../images/play.png" alt="Play Button" />
+			</button>
+			<button onclick="document.getElementById('player').pause()">
+				<img src="../images/pause.png" alt="Pause Button" />
+			</button>
+		</div>
+
+		<hr />
+	</body>
+</html>
